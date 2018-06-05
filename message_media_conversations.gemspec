@@ -2,11 +2,11 @@ Gem::Specification.new do |s|
   s.name = 'message_media_conversations'
   s.version = '1.0.0'
   s.summary = 'message_media_conversations'
-  s.description = 'Conversations Api Documentation'
-  s.authors = ['APIMatic SDK Generator']
-  s.email = 'support@apimatic.io'
-  s.homepage = 'https://apimatic.io'
-  s.license = 'MIT'
+  s.description = 'The Conversations API allows users to communicate by sending and receiving messages via OTT messaging services'
+  s.authors = ['MessageMedia Developers']
+  s.email = 'developers@messagemedia.com'
+  s.homepage = 'https://developers.messagemedia.com'
+  s.license = 'Apache-2.0'
   s.add_dependency('logging', '~> 2.0')
   s.add_dependency('faraday', '~> 0.10.0')
   s.add_dependency('test-unit', '~> 3.1.5')
