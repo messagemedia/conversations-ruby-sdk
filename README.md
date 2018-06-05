@@ -1,4 +1,4 @@
-# MessageMedia Webhooks NodeJS SDK
+# MessageMedia Conversations Ruby SDK
 [![Travis Build Status](https://api.travis-ci.org/messagemedia/conversations-ruby-sdk.svg?branch=master)](https://travis-ci.org/messagemedia/conversations-ruby-sdk)
 [![Gem Version](https://badge.fury.io/rb/messagemedia_conversations_sdk.svg)](https://badge.fury.io/rb/messagemedia_conversations_sdk)
 
