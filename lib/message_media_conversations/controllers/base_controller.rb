@@ -50,6 +50,8 @@ module MessageMediaConversations
     end
 
     def validate_response(context)
+      raise APIException.new 'The account is not provisioned.', context if
+      context.response.status_code == 400
       raise APIException.new 'HTTP Response Not OK', context unless
         context.response.status_code.between?(200, 208) # [200,208] = HTTP OK
     end

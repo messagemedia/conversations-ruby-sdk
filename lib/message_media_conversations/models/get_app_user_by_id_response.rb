@@ -2,42 +2,35 @@
 # ( https://apimatic.io ).
 
 module MessageMediaConversations
-  # MessageDto Model.
-  class MessageDto < BaseModel
-    # TODO: Write general description for this method
-    # @return [String]
-    attr_accessor :channel
-
+  # GetAppUserByIdResponse Model.
+  class GetAppUserByIdResponse < BaseModel
     # TODO: Write general description for this method
     # @return [String]
     attr_accessor :id
 
     # TODO: Write general description for this method
     # @return [String]
-    attr_accessor :text
+    attr_accessor :surname
 
     # TODO: Write general description for this method
     # @return [String]
-    attr_accessor :timestamp
+    attr_accessor :given_name
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['channel'] = 'channel'
       @_hash['id'] = 'id'
-      @_hash['text'] = 'text'
-      @_hash['timestamp'] = 'timestamp'
+      @_hash['surname'] = 'surname'
+      @_hash['given_name'] = 'given_name'
       @_hash
     end
 
-    def initialize(channel = nil,
-                   id = nil,
-                   text = nil,
-                   timestamp = nil)
-      @channel = channel
+    def initialize(id = nil,
+                   surname = nil,
+                   given_name = nil)
       @id = id
-      @text = text
-      @timestamp = timestamp
+      @surname = surname
+      @given_name = given_name
     end
 
     # Creates an instance of the object from a hash.
@@ -45,16 +38,14 @@ module MessageMediaConversations
       return nil unless hash
 
       # Extract variables from the hash.
-      channel = hash['channel']
       id = hash['id']
-      text = hash['text']
-      timestamp = hash['timestamp']
+      surname = hash['surname']
+      given_name = hash['given_name']
 
       # Create object from extracted values.
-      MessageDto.new(channel,
-                     id,
-                     text,
-                     timestamp)
+      GetAppUserByIdResponse.new(id,
+                                 surname,
+                                 given_name)
     end
   end
 end
