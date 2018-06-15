@@ -2,42 +2,28 @@
 # ( https://apimatic.io ).
 
 module MessageMediaConversations
-  # MessageDto Model.
-  class MessageDto < BaseModel
+  # SendMessageResponse Model.
+  class SendMessageResponse < BaseModel
     # TODO: Write general description for this method
     # @return [String]
     attr_accessor :channel
 
     # TODO: Write general description for this method
     # @return [String]
-    attr_accessor :id
-
-    # TODO: Write general description for this method
-    # @return [String]
     attr_accessor :text
-
-    # TODO: Write general description for this method
-    # @return [String]
-    attr_accessor :timestamp
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['channel'] = 'channel'
-      @_hash['id'] = 'id'
       @_hash['text'] = 'text'
-      @_hash['timestamp'] = 'timestamp'
       @_hash
     end
 
     def initialize(channel = nil,
-                   id = nil,
-                   text = nil,
-                   timestamp = nil)
+                   text = nil)
       @channel = channel
-      @id = id
       @text = text
-      @timestamp = timestamp
     end
 
     # Creates an instance of the object from a hash.
@@ -46,15 +32,11 @@ module MessageMediaConversations
 
       # Extract variables from the hash.
       channel = hash['channel']
-      id = hash['id']
       text = hash['text']
-      timestamp = hash['timestamp']
 
       # Create object from extracted values.
-      MessageDto.new(channel,
-                     id,
-                     text,
-                     timestamp)
+      SendMessageResponse.new(channel,
+                              text)
     end
   end
 end

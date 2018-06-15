@@ -4,16 +4,16 @@
 module MessageMediaConversations
   #  message_media_conversations client class.
   class MessageMediaConversationsClient
-    # Singleton access to provisioning controller.
-    # @return [ProvisioningController] Returns the controller instance.
-    def provisioning
-      ProvisioningController.instance
-    end
-
     # Singleton access to app_users controller.
     # @return [AppUsersController] Returns the controller instance.
     def app_users
       AppUsersController.instance
+    end
+
+    # Singleton access to configuration controller.
+    # @return [ConfigurationController] Returns the controller instance.
+    def configuration
+      ConfigurationController.instance
     end
 
     # Singleton access to facebook controller.
