@@ -11,7 +11,7 @@ module MessageMediaConversations
       @http_call_back = http_call_back
 
       @global_headers = {
-        'user-agent' => 'messagesmedia-conversations'
+        'user-agent' => 'messagemedia-conversations-sdk-1.0.0'
       }
       @logger = Logging.logger[self]
       @logger.info("Instantiated controller class.")
